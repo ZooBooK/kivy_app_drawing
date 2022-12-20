@@ -1,0 +1,1232 @@
+WindowManager:
+    MainWindow:
+    SecondWindow:
+
+#: import Window kivy.core.window.Window
+
+<MainWindow>:
+    name: 'main'
+    ScrollView:
+        effect_cls: 'ScrollEffect'
+        size_hint: 1, 0.91
+        pos_hint: {'x': 0, 'y': 0.092}
+        orientation: 'vertical'
+        Widget:
+            canvas.before:
+                Color:
+                    rgba: 0.96, 0.96, 0.96, 1
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+                    #size: '375dp', '4740dp'
+
+            size_hint: None, None
+            width: '375dp'
+            height: '4740dp'
+
+            Carousel:
+                ignore_perpendicular_swipes: False
+                scroll_distance: '1dp'
+                min_move: 0.0000001
+                loop: True
+                direction: 'right'
+                size_hint: None, None
+                width: '355dp'
+                height: '170dp'
+                pos: '10dp','4560dp'
+
+                AsyncImage:
+                    source: 'images/banners/banner_sale700.png'
+                    size: '355dp','170dp'
+                AsyncImage:
+                    source: 'images/banners/banner_sale1000.png'
+                    size: '355dp','170dp'
+                AsyncImage:
+                    source: 'images/banners/banner_grand10.png'
+                    size: '355dp','170dp'
+                AsyncImage:
+                    source: 'images/banners/banner_time10.png'
+                    size: '355dp','170dp'
+
+            #Button:
+                #background_normal: 'images/banners/left-arrow.png'
+                #background_down: 'images/banners/left-arrow.png'
+                #pos: '16', '4637dp'
+                #size_hint: 0.1, 0.1
+
+            #Button:
+                #background_normal: 'images/banners/right-arrow.png'
+                #background_down: 'images/banners/right-arrow.png'
+                #pos: '332dp', '4620dp'
+                #size_hint: 0.1,0.1
+
+            Image:
+                source: 'images/search_header_nw.png'
+                size: '375dp', '60dp'
+                pos: '0dp', '4470dp'
+
+            Image:
+                source: 'images/choose_your_diet.png'
+                size: '355dp', '106dp'
+                pos: '10dp', '4344dp'
+
+            Button:
+                id: standard_menu
+                on_press: False
+                background_normal: 'images/menu_nav_btn/on_prs/standard_menu_on.png'
+                background_down: 'images/menu_nav_btn/off_prs/standard_menu.png'
+                size: '188dp','146dp'
+                pos: '0','4174dp'
+
+            Button:
+                id: constructor_menu
+                background_normal: 'images/menu_nav_btn/off_prs/constructor_menu.png'
+                background_down: 'images/menu_nav_btn/on_prs/constructor_menu_on.png'
+                size: '188dp','146dp'
+                pos: '0','4033dp'
+
+            Button:
+                id: standard_mini
+                background_normal: 'images/menu_nav_btn/off_prs/standard_mini.png'
+                background_down: 'images/menu_nav_btn/on_prs/standard_mini_on.png'
+                size: '188dp','146dp'
+                pos: '188dp','4174dp'
+
+            Button:
+                id: ready_ration
+                background_normal: 'images/menu_nav_btn/off_prs/ready_ration.png'
+                background_down: 'images/menu_nav_btn/on_prs/ready_ration_on.png'
+                size: '188dp','146dp'
+                pos: '188dp','4033dp'
+
+            Image:
+                source: 'images/choose_your_day/day_placeholder.png'
+                size: '375dp', '60dp'
+                pos: '0dp', '3938dp'
+
+            Carousel:
+                ignore_perpendicular_swipes: False
+                scroll_distance: '10dp'
+                min_move: 0
+                loop: True
+                direction: 'right'
+                size_hint: None, None
+                width: '365dp'
+                height: '27dp'
+                pos: '10dp','3955dp'
+
+
+                Label:
+                    color: 1,1,1,1
+                    valign: 'middle'
+                    halign: 'center'
+                    size: self.texture_size
+                    font_size: 20
+                    font_name: 'fonts/OpenSans-Bold.ttf'
+                    text: 'Понедельник'
+                Label:
+                    color: 1,1,1,1
+                    valign: 'middle'
+                    halign: 'center'
+                    size: self.texture_size
+                    font_size: 20
+                    font_name: 'fonts/OpenSans-Bold.ttf'
+                    text: 'Вторник'
+                Label:
+                    color: 1,1,1,1
+                    valign: 'middle'
+                    halign: 'center'
+                    size: self.texture_size
+                    font_size: 20
+                    font_name: 'fonts/OpenSans-Bold.ttf'
+                    text: 'Среда'
+                Label:
+                    color: 1,1,1,1
+                    valign: 'middle'
+                    halign: 'center'
+                    size: self.texture_size
+                    font_size: 20
+                    font_name: 'fonts/OpenSans-Bold.ttf'
+                    text: 'Четверг'
+                Label:
+                    color: 1,1,1,1
+                    valign: 'middle'
+                    halign: 'center'
+                    size: self.texture_size
+                    font_size: 20
+                    font_name: 'fonts/OpenSans-Bold.ttf'
+                    text: 'Пятница'
+                Label:
+                    color: 1,1,1,1
+                    valign: 'middle'
+                    halign: 'center'
+                    size: self.texture_size
+                    font_size: 20
+                    font_name: 'fonts/OpenSans-Bold.ttf'
+                    text: 'Суббота'
+                Label:
+                    color: 1,1,1,1
+                    text: 'Воскресенье'
+                    valign: 'middle'
+                    halign: 'center'
+                    size: self.texture_size
+                    font_size: 20
+                    font_name: 'fonts/OpenSans-Bold.ttf'
+
+
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: 'Блюда для завтрака'
+                pos: '10dp', '3873dp'
+                size: self.texture_size
+                font_size: 18
+
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: 'Выпечка, десерты'
+                pos: '10dp', '3425dp'
+                size: self.texture_size
+                font_size: 18
+
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: 'Блюда для обеда (Салаты)'
+                pos: '10dp', '2977dp'
+                size: self.texture_size
+                font_size: 18
+
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: 'Блюда для обеда (Супы)'
+                pos: '10dp', '2529dp'
+                size: self.texture_size
+                font_size: 18
+
+            Label:
+                color: 1,0,0,1
+                font_name: 'fonts/MontserratSemiBold 600.ttf'
+                text: 'Выберите 2 блюда'
+                pos: '10dp', '2504dp'
+                size: self.texture_size
+                font_size: 14
+
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: 'Блюда для обеда (Основные блюда)'
+                pos: '10dp', '2054dp'
+                size: self.texture_size
+                font_size: 18
+
+            Label:
+                color: 1,0,0,1
+                font_name: 'fonts/MontserratSemiBold 600.ttf'
+                text: 'Выберите 2 блюда'
+                pos: '10dp', '2029dp'
+                size: self.texture_size
+                font_size: 14
+
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: 'Блюда для обеда (Гарниры)'
+                pos: '10dp', '1579dp'
+                size: self.texture_size
+                font_size: 18
+
+            Label:
+                color: 1,0,0,1
+                font_name: 'fonts/MontserratSemiBold 600.ttf'
+                text: 'Выберите 2 блюда'
+                pos: '10dp', '1554dp'
+                size: self.texture_size
+                font_size: 14
+
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: 'Блюда для ужина'
+                pos: '10dp', '1104dp'
+                size: self.texture_size
+                font_size: 18
+
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: 'Напитки'
+                pos: '10dp', '656dp'
+                size: self.texture_size
+                font_size: 18
+
+            Image:
+                source: 'images/product_info/product_info.png'
+                size: '355dp','285dp'
+                pos: '10dp','3490dp'
+
+            Image:
+                source: 'images/product_info/product_info.png'
+                size: '355dp','285dp'
+                pos: '10dp','3042dp'
+
+            Image:
+                source: 'images/product_info/product_info.png'
+                size: '355dp','285dp'
+                pos: '10dp','2594dp'
+
+            Image:
+                source: 'images/product_info/product_info.png'
+                size: '355dp','285dp'
+                pos: '10dp','2119dp'
+
+            Image:
+                source: 'images/product_info/product_info.png'
+                size: '355dp','285dp'
+                pos: '10dp','1644dp'
+
+            Image:
+                source: 'images/product_info/product_info.png'
+                size: '355dp','285dp'
+                pos: '10dp','1169dp'
+
+            Image:
+                source: 'images/product_info/product_info.png'
+                size: '355dp','285dp'
+                pos: '10dp','721dp'
+
+            Image:
+                source: 'images/product_info/product_info.png'
+                size: '355dp','285dp'
+                pos: '10dp','273dp'
+
+            Image:
+                source: 'images/button/border.png'
+                size: '355dp','49dp'
+                pos: '10dp','133dp'
+
+            Button:
+                id: plus_button
+                background_normal: 'images/button/plus_btn5.png'
+                background_down: 'images/button/plus_btn5.png'
+                size: '18dp','18dp'
+                pos: '330dp','150dp'
+
+            Button:
+                id: minus_button
+                background_normal: 'images/button/minus_btn8.png'
+                background_down: 'images/button/minus_btn8.png'
+                size: '18dp','18dp'
+                pos: '26dp','150dp'
+
+            Button:
+                id: continue_btn
+                background_normal: 'images/button/continue_btn.png'
+                background_down: 'images/button/continue_btn.png'
+                size: '355dp','50dp'
+                pos: '10dp','73dp'
+                on_release: root.manager.current = 'second'
+                on_press:
+                    root.manager.transition.direction = 'left'
+
+            Label:
+                text: 'Выберите готовое питание\nна следующий день'
+                pos: '82dp', '16dp'
+                size: self.texture_size
+                font_size: 18
+                color: 0,0,0,1
+                font_name: 'fonts/OpenSans.ttf'
+                valign: 'middle'
+                halign: 'center'
+
+            ScrollView:
+                do_scroll_x: True
+                do_scroll_y: False
+                orientation: 'horizontal'
+                size_hint: None,None
+                height: '65dp'
+                width: '365dp'
+                orientation: 'vertical'
+                pos: '10dp','3790dp'
+
+                BoxLayout
+                    orientation: 'horizontal'
+                    spacing: '15dp'
+                    size_hint: None, None
+                    height: '65dp'
+                    width: '430dp'
+
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/cake.png'
+                        background_down: 'images/product/cake-active.png'
+                        size: '100dp', '65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/emesis.png'
+                        background_down: 'images/product/emesis-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/pasta.png'
+                        background_down: 'images/product/pasta-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/pancake.png'
+                        background_down: 'images/product/pancake-active.png'
+                        size: '100dp','65dp'
+
+
+            ScrollView:
+                do_scroll_x: True
+                do_scroll_y: False
+                orientation: 'horizontal'
+                size_hint: None,None
+                height: '65dp'
+                width: '365dp'
+                orientation: 'vertical'
+                pos: '10dp','3342dp'
+
+                BoxLayout
+                    orientation: 'horizontal'
+                    spacing: '15dp'
+                    size_hint: None, None
+                    height: '65dp'
+                    width: '430dp'
+
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/cake.png'
+                        background_down: 'images/product/cake-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/emesis.png'
+                        background_down: 'images/product/emesis-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/pasta.png'
+                        background_down: 'images/product/pasta-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/pancake.png'
+                        background_down: 'images/product/pancake-active.png'
+                        size: '100dp','65dp'
+
+            ScrollView:
+                do_scroll_x: True
+                do_scroll_y: False
+                orientation: 'horizontal'
+                size_hint: None,None
+                height: '65dp'
+                width: '365dp'
+                orientation: 'vertical'
+                pos: '10dp','2894dp'
+
+                BoxLayout
+                    orientation: 'horizontal'
+                    spacing: '15dp'
+                    size_hint: None, None
+                    height: '65dp'
+                    width: '430dp'
+
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/cake.png'
+                        background_down: 'images/product/cake-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/emesis.png'
+                        background_down: 'images/product/emesis-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/pasta.png'
+                        background_down: 'images/product/pasta-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/pancake.png'
+                        background_down: 'images/product/pancake-active.png'
+                        size: '100dp','65dp'
+
+            ScrollView:
+                do_scroll_x: True
+                do_scroll_y: False
+                orientation: 'horizontal'
+                size_hint: None,None
+                height: '65dp'
+                width: '365dp'
+                orientation: 'vertical'
+                pos: '10dp','2419dp'
+
+                BoxLayout
+                    orientation: 'horizontal'
+                    spacing: '15dp'
+                    size_hint: None, None
+                    height: '65dp'
+                    width: '430dp'
+
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/cake.png'
+                        background_down: 'images/product/cake-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/emesis.png'
+                        background_down: 'images/product/emesis-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/pasta.png'
+                        background_down: 'images/product/pasta-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/pancake.png'
+                        background_down: 'images/product/pancake-active.png'
+                        size: '100dp','65dp'
+
+            ScrollView:
+                do_scroll_x: True
+                do_scroll_y: False
+                orientation: 'horizontal'
+                size_hint: None,None
+                height: '65dp'
+                width: '365dp'
+                orientation: 'vertical'
+                pos: '10dp','1944dp'
+
+                BoxLayout
+                    orientation: 'horizontal'
+                    spacing: '15dp'
+                    size_hint: None, None
+                    height: '65dp'
+                    width: '430dp'
+
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/cake.png'
+                        background_down: 'images/product/cake-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/emesis.png'
+                        background_down: 'images/product/emesis-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/pasta.png'
+                        background_down: 'images/product/pasta-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/pancake.png'
+                        background_down: 'images/product/pancake-active.png'
+                        size: '100dp','65dp'
+
+            ScrollView:
+                do_scroll_x: True
+                do_scroll_y: False
+                orientation: 'horizontal'
+                size_hint: None,None
+                height: '65dp'
+                width: '365dp'
+                orientation: 'vertical'
+                pos: '10dp','1469dp'
+
+                BoxLayout
+                    orientation: 'horizontal'
+                    spacing: '15dp'
+                    size_hint: None, None
+                    height: '65dp'
+                    width: '430dp'
+
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/cake.png'
+                        background_down: 'images/product/cake-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/emesis.png'
+                        background_down: 'images/product/emesis-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/pasta.png'
+                        background_down: 'images/product/pasta-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/pancake.png'
+                        background_down: 'images/product/pancake-active.png'
+                        size: '100dp','65dp'
+
+            ScrollView:
+                do_scroll_x: True
+                do_scroll_y: False
+                orientation: 'horizontal'
+                size_hint: None,None
+                height: '65dp'
+                width: '365dp'
+                orientation: 'vertical'
+                pos: '10dp','1021dp'
+
+                BoxLayout
+                    orientation: 'horizontal'
+                    spacing: '15dp'
+                    size_hint: None, None
+                    height: '65dp'
+                    width: '430dp'
+
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/cake.png'
+                        background_down: 'images/product/cake-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/emesis.png'
+                        background_down: 'images/product/emesis-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/pasta.png'
+                        background_down: 'images/product/pasta-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/pancake.png'
+                        background_down: 'images/product/pancake-active.png'
+                        size: '100dp','65dp'
+
+            ScrollView:
+                do_scroll_x: True
+                do_scroll_y: False
+                orientation: 'horizontal'
+                size_hint: None,None
+                height: '65dp'
+                width: '365dp'
+                orientation: 'vertical'
+                pos: '10dp','573dp'
+
+                BoxLayout
+                    orientation: 'horizontal'
+                    spacing: '15dp'
+                    size_hint: None, None
+                    height: '65dp'
+                    width: '430dp'
+
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/cake.png'
+                        background_down: 'images/product/cake-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/emesis.png'
+                        background_down: 'images/product/emesis-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/pasta.png'
+                        background_down: 'images/product/pasta-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/pancake.png'
+                        background_down: 'images/product/pancake-active.png'
+                        size: '100dp','65dp'
+
+            Label:
+                color: 0.42,0.42,0.42,1
+                font_name: 'fonts/OpenSans.ttf'
+                text: 'Всего Ккал: 9225'
+                pos: '10dp', '218dp'
+                size: self.texture_size
+                font_size: 18
+
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/OpenSans.ttf'
+                text: '1'
+                pos: '181.5dp', '145dp'
+                size: self.texture_size
+                font_size: 20
+
+    BoxLayout:
+        rows: 1
+        size_hint: None, None
+        width: '375dp'
+        height: '69dp'
+        pos_hint: {'x': 0, 'y': 0}
+        orientation: 'horizontal'
+
+        Button:
+            size_hint: None, None
+            width: '93.75dp'
+            height: '69dp'
+            background_normal: 'images/footer_nav_btn/home.png'
+            background_down: 'images/footer_nav_btn/home-active.png'
+            on_release: app.root.current = 'main'
+        Button:
+            size_hint: None, None
+            width: '93.75dp'
+            height: '69dp'
+            background_normal: 'images/footer_nav_btn/contacts.png'
+            background_down: 'images/footer_nav_btn/contacts-active.png'
+        Button:
+            size_hint: None, None
+            width: '93.75dp'
+            height: '69dp'
+            background_normal: 'images/footer_nav_btn/cart.png'
+            background_down: 'images/footer_nav_btn/cart-active.png'
+            on_release: root.manager.current = 'second'
+            on_press:
+                root.manager.transition.direction = 'left'
+        Button:
+            size_hint: None, None
+            width: '93.75dp'
+            height: '69dp'
+            background_normal: 'images/footer_nav_btn/profile.png'
+            background_down: 'images/footer_nav_btn/profile-active.png'
+
+    #NavBar:
+        #rows: 1
+        #size_hint: None, None
+        #width: '375dp'
+        #height: '69dp'
+        #orientation: 'horizontal'
+
+
+#<NavBar@BoxLayout>:
+    #BoxLayout:
+        #rows: 1
+        #size_hint: None, None
+        #width: '375dp'
+        #height: '69dp'
+        #orientation: 'horizontal'
+
+        #Button:
+            #size_hint: None, None
+            #width: '93.75dp'
+            #height: '69dp'
+            #background_normal: 'images/footer_nav_btn/home.png'
+            #background_down: 'images/footer_nav_btn/home-active.png'
+            #on_release:
+                #app.root.current: 'main'
+        #Button:
+            #size_hint: None, None
+            #width: '93.75dp'
+            #height: '69dp'
+            #background_normal: 'images/footer_nav_btn/contacts.png'
+            #background_down: 'images/footer_nav_btn/contacts-active.png'
+        #Button:
+            #size_hint: None, None
+            #width: '93.75dp'
+            #height: '69dp'
+            #background_normal: 'images/footer_nav_btn/cart.png'
+            #background_down: 'images/footer_nav_btn/cart-active.png'
+            #on_release:
+                #app.root.current: 'cart'
+        #Button:
+            #size_hint: None, None
+            #width: '93.75dp'
+            #height: '69dp'
+            #background_normal: 'images/footer_nav_btn/profile.png'
+            #background_down: 'images/footer_nav_btn/profile-active.png'
+
+<SecondWindow>:
+    name: 'second'
+    orientation: 'vertical'
+
+    ScrollView:
+        effect_cls: 'ScrollEffect'
+        #size_hint: 1, 0.91
+        orientation: 'vertical'
+        pos_hint: {'x': 0, 'y': 0}
+
+        Widget:
+
+            canvas.before:
+                Color:
+                    rgba: 0.96, 0.96, 0.96, 1
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+                    #size: '375dp', '2382dp'
+            size_hint: None, None
+            width: '375'
+            height: '2382dp'
+
+            Image:
+                source: 'images/busket/background/footer-Back.png'
+                size: '375dp','123dp'
+                pos: '0dp', '1122dp'
+            Image:
+                source: 'images/busket/background/header-background.png'
+                size: '375dp','87dp'
+                pos: '0dp', '2295dp'
+            Image:
+                source: 'images/busket/background/middle-back.png'
+                size: '375dp','1103dp'
+                pos: '0dp', '1211dp'
+
+            Label:
+                color: 1,1,1,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: 'Корзина'
+                pos: '10dp', '2334dp'
+                size: self.texture_size
+                font_size: 20
+            Label:
+                color: 1,1,1,1
+                font_name: 'fonts/Montserrat Medium 500.ttf'
+                text: 'Очистить'
+                pos: '293dp', '2335dp'
+                size: self.texture_size
+                font_size: 14
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: 'Стандартное меню'
+                pos: '10dp', '2251dp'
+                size: self.texture_size
+                font_size: 20
+
+            Button:
+                background_normal: 'images/busket/button/xxx.png'
+                background_down: 'images/busket/button/xxx.png'
+                #source: 'images/busket/background/middle-back.png'
+                size: '20dp','20dp'
+                pos: '335dp', '2255dp'
+
+            Image:
+                source: 'images/choose_your_day/day_placeholder.png'
+                size: '375dp', '60dp'
+                pos: '0dp', '2166dp'
+
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: 'Блюда для завтрака'
+                pos: '10dp', '2101dp'
+                size: self.texture_size
+                font_size: 18
+
+            Carousel:
+                ignore_perpendicular_swipes: False
+                scroll_distance: '10dp'
+                min_move: 0
+                loop: True
+                direction: 'right'
+                size_hint: None, None
+                width: '365dp'
+                height: '27dp'
+                pos: '10dp','2180dp'
+
+
+                Label:
+                    color: 1,1,1,1
+                    valign: 'middle'
+                    halign: 'center'
+                    size: self.texture_size
+                    font_size: 20
+                    font_name: 'fonts/OpenSans-Bold.ttf'
+                    text: 'Понедельник'
+                Label:
+                    color: 1,1,1,1
+                    valign: 'middle'
+                    halign: 'center'
+                    size: self.texture_size
+                    font_size: 20
+                    font_name: 'fonts/OpenSans-Bold.ttf'
+                    text: 'Вторник'
+                Label:
+                    color: 1,1,1,1
+                    valign: 'middle'
+                    halign: 'center'
+                    size: self.texture_size
+                    font_size: 20
+                    font_name: 'fonts/OpenSans-Bold.ttf'
+                    text: 'Среда'
+                Label:
+                    color: 1,1,1,1
+                    valign: 'middle'
+                    halign: 'center'
+                    size: self.texture_size
+                    font_size: 20
+                    font_name: 'fonts/OpenSans-Bold.ttf'
+                    text: 'Четверг'
+                Label:
+                    color: 1,1,1,1
+                    valign: 'middle'
+                    halign: 'center'
+                    size: self.texture_size
+                    font_size: 20
+                    font_name: 'fonts/OpenSans-Bold.ttf'
+                    text: 'Пятница'
+                Label:
+                    color: 1,1,1,1
+                    valign: 'middle'
+                    halign: 'center'
+                    size: self.texture_size
+                    font_size: 20
+                    font_name: 'fonts/OpenSans-Bold.ttf'
+                    text: 'Суббота'
+                Label:
+                    color: 1,1,1,1
+                    text: 'Воскресенье'
+                    valign: 'middle'
+                    halign: 'center'
+                    size: self.texture_size
+                    font_size: 20
+                    font_name: 'fonts/OpenSans-Bold.ttf'
+
+            ScrollView:
+                do_scroll_x: True
+                do_scroll_y: False
+                orientation: 'horizontal'
+                size_hint: None,None
+                height: '65dp'
+                width: '365dp'
+                orientation: 'vertical'
+                pos: '10dp','2018dp'
+
+                BoxLayout
+                    orientation: 'horizontal'
+                    spacing: '15dp'
+                    size_hint: None, None
+                    height: '65dp'
+                    width: '430dp'
+
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/cake.png'
+                        background_down: 'images/product/cake-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/emesis.png'
+                        background_down: 'images/product/emesis-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/pasta.png'
+                        background_down: 'images/product/pasta-active.png'
+                        size: '100dp','65dp'
+                    Button:
+                        id: product_btn
+                        background_normal: 'images/product/pancake.png'
+                        background_down: 'images/product/pancake-active.png'
+                        size: '100dp','65dp'
+
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: 'Блины с ветчиной\nи сыром'
+                pos: '111dp', '1568dp'
+                size: self.texture_size
+                font_size: 16
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: 'Соус из вишни'
+                pos: '111dp', '1436dp'
+                size: self.texture_size
+                font_size: 16
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: 'Сырники творожные'
+                pos: '111dp', '1310dp'
+                size: self.texture_size
+                font_size: 16
+
+            Label:
+                color: 0.58,0.58,0.58,1
+                font_name: 'fonts/Montserrat Regular 400.ttf'
+                text: '700 гр.'
+                pos: '111dp', '1536dp'
+                size: self.texture_size
+                font_size: 14
+            Label:
+                color: 0.58,0.58,0.58,1
+                font_name: 'fonts/Montserrat Regular 400.ttf'
+                text: '100 мл'
+                pos: '111dp', '1401dp'
+                size: self.texture_size
+                font_size: 14
+            Label:
+                color: 0.58,0.58,0.58,1
+                font_name: 'fonts/Montserrat Regular 400.ttf'
+                text: '700 гр.'
+                pos: '111dp', '1278dp'
+                size: self.texture_size
+                font_size: 14
+
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: '1 398.00₽'
+                pos: '240dp', '1499dp'
+                size: self.texture_size
+                font_size: 24
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: '50.00₽'
+                pos: '273dp', '1370dp'
+                size: self.texture_size
+                font_size: 24
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: '549.00₽'
+                pos: '260dp', '1241dp'
+                size: self.texture_size
+                font_size: 24
+
+            Label:
+                color: 1,1,1,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: 'Итого: '
+                pos: '156dp', '1150dp'
+                size: self.texture_size
+                font_size: 18
+            Label:
+                color: 1,1,1,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: '6 500.00₽'
+                pos: '227dp', '1147dp'
+                size: self.texture_size
+                font_size: 30
+
+            Image:
+                source: 'images/product_info/product_info.png'
+                size: '355dp', '285dp'
+                pos: '10dp', '1718dp'
+
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/OpenSans-Bold.ttf'
+                text: 'Доставка готовых блюд'
+                pos: '62dp', '1650dp'
+                size: self.texture_size
+                font_size: 20
+
+            Image:
+                source: 'images/busket/ready-ration/pancake.png'
+                size: '66dp', '58dp'
+                pos: '20dp', '1548dp'
+            Image:
+                source: 'images/busket/ready-ration/sous.png'
+                size: '60dp', '60dp'
+                pos: '20dp', '1398dp'
+            Image:
+                source: 'images/busket/ready-ration/bliny.png'
+                size: '66dp', '58dp'
+                pos: '20dp', '1271dp'
+
+            Image:
+                source: 'images/busket/button/xxx.png'
+                size: '20dp', '20dp'
+                pos: '336dp', '1588dp'
+            Image:
+                source: 'images/busket/button/xxx.png'
+                size: '20dp', '20dp'
+                pos: '336dp', '1440dp'
+            Image:
+                source: 'images/busket/button/xxx.png'
+                size: '20dp', '20dp'
+                pos: '336dp', '1311dp'
+
+            Image:
+                source: 'images/busket/information/warning.png'
+                size: '355dp', '155dp'
+                pos: '10dp', '927dp'
+
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/Montserrat Regular 400.ttf'
+                text: 'Адрес доставки'
+                pos: '10dp', '877dp'
+                size: self.texture_size
+                font_size: 14
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/Montserrat Regular 400.ttf'
+                text: 'Дата доставки'
+                pos: '10dp', '773dp'
+                size: self.texture_size
+                font_size: 14
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/Montserrat Regular 400.ttf'
+                text: '*  при изменении даты доставки,\nнужно будет пересобрать рацион'
+                pos: '25dp', '671dp'
+                size: self.texture_size
+                font_size: 12
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/Montserrat Regular 400.ttf'
+                text: 'Оплата'
+                pos: '10dp', '621dp'
+                size: self.texture_size
+                font_size: 14
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/Montserrat Regular 400.ttf'
+                text: 'Промокод'
+                pos: '10dp', '417dp'
+                size: self.texture_size
+                font_size: 14
+            Label:
+                color: 0,0,0,1
+                font_name: 'fonts/Montserrat Regular 400.ttf'
+                text: 'Комментарий к заказу'
+                pos: '10dp', '313dp'
+                size: self.texture_size
+                font_size: 14
+
+            Image:
+                source: 'images/busket/input_pull/Adress.png'
+                size: '355dp','40dp'
+                pos: '10dp','823dp'
+            Image:
+                source: 'images/busket/input_pull/dt.png'
+                size: '355dp','40dp'
+                pos: '10dp','719dp'
+            Image:
+                source: 'images/busket/input_pull/card-pay.png'
+                size: '355dp','40dp'
+                pos: '10dp','567dp'
+            Image:
+                source: 'images/busket/input_pull/cash.png'
+                size: '355dp','40dp'
+                pos: '10dp','517dp'
+            Image:
+                source: 'images/busket/input_pull/card-man.png'
+                size: '355dp','40dp'
+                pos: '10dp','467dp'
+            Image:
+                source: 'images/busket/input_pull/adress.png'
+                size: '355dp','40dp'
+                pos: '10dp','363dp'
+            Image:
+                source: 'images/busket/input_pull/comments.png'
+                size: '355dp','120dp'
+                pos: '10dp','179dp'
+
+            Label:
+                color: 0.42,0.42,0.42,1
+                font_name: 'fonts/Montserrat Regular 400.ttf'
+                text: 'Введите адрес'
+                pos: '25dp', '833dp'
+                size: self.texture_size
+                font_size: 14
+            Label:
+                color: 0.92,0.53,0.17,1
+                font_name: 'fonts/Montserrat Regular 400.ttf'
+                text: 'Картой банка'
+                pos: '25dp', '577dp'
+                size: self.texture_size
+                font_size: 14
+            Label:
+                color: 0.42,0.42,0.42,1
+                font_name: 'fonts/Montserrat Regular 400.ttf'
+                text: 'Наличными курьеру'
+                pos: '25dp', '527dp'
+                size: self.texture_size
+                font_size: 14
+            Label:
+                color: 0.42,0.42,0.42,1
+                font_name: 'fonts/Montserrat Regular 400.ttf'
+                text: 'Курьеру картой'
+                pos: '25dp', '477dp'
+                size: self.texture_size
+                font_size: 14
+            Label:
+                color: 0.42,0.42,0.42,1
+                font_name: 'fonts/Montserrat Regular 400.ttf'
+                text: 'Введите промокод'
+                pos: '25dp', '373dp'
+                size: self.texture_size
+                font_size: 14
+            Label:
+                color: 0.42,0.42,0.42,1
+                font_name: 'fonts/Montserrat Regular 400.ttf'
+                text: 'Введите комментарий'
+                pos: '25dp', '269dp'
+                size: self.texture_size
+                font_size: 14
+
+
+            Button:
+                pos: '10dp', '99dp'
+                size_hint: None, None
+                width: '355dp'
+                height: '50dp'
+                background_normal: 'images/busket/button/make-order-btn.png'
+                background_down: 'images/busket/button/make-order-btn.png'
+                on_release: root.manager.current = 'main'
+                on_press:
+                    root.manager.transition.direction = 'right'
+    BoxLayout:
+        rows: 1
+        size_hint: None, None
+        width: '375dp'
+        height: '69dp'
+        orientation: 'horizontal'
+
+        Button:
+            size_hint: None, None
+            width: '93.75dp'
+            height: '69dp'
+            background_normal: 'images/footer_nav_btn/home.png'
+            background_down: 'images/footer_nav_btn/home-active.png'
+            on_release: root.manager.current= 'main'
+            on_press:
+                root.manager.transition.direction = 'right'
+
+        Button:
+            size_hint: None, None
+            width: '93.75dp'
+            height: '69dp'
+            background_normal: 'images/footer_nav_btn/contacts.png'
+            background_down: 'images/footer_nav_btn/contacts-active.png'
+        Button:
+            size_hint: None, None
+            width: '93.75dp'
+            height: '69dp'
+            background_normal: 'images/footer_nav_btn/cart.png'
+            background_down: 'images/footer_nav_btn/cart-active.png'
+            on_release: root.manager.current = 'second'
+            on_press:
+                root.manager.transition.direction = 'left'
+        Button:
+            size_hint: None, None
+            width: '93.75dp'
+            height: '69dp'
+            background_normal: 'images/footer_nav_btn/profile.png'
+            background_down: 'images/footer_nav_btn/profile-active.png'
+
+
+    #NavBar:
+        #rows: 1
+        #size_hint: None, None
+        #width: '375dp'
+        #height: '69dp'
+        #orientation: 'horizontal'
+
+
+
+
